@@ -1,8 +1,31 @@
-<%= simple_form_for @contact do |f| %>
-    <div class="container">
-        <%= f.input :name, require: true, error: 'Username is mandatory, please specify one' %>
-        <%= f.input :email %>
-        <%= f.input :message, as: :text %>
-        <%= f.submit "Envoyer" %>
+
+<div class="container">
+    <%= form_for @contact do |f| %>
+        <% if flash[:error].present? %>
+        <p> flash[:error]</p>
+        <% end %>
+    <h1 class="my-5"> Formulaire de Contact</h1>
+    <div>
+    <%= f.text_field :name, required: true, placeholder:"Nom", class:"" %>
     </div>
-<% end%>
+    
+    <div>
+        <br>
+        <%= f.email_field :email, required: true, placeholder:"Email", class:"" %>
+    </div>
+    <div>
+        <br>
+        <%= f.text_area :message, as: :text, placeholder:"Message", class:"" %>
+    </div>
+
+    
+        <%#= f.label :nickname %> <br>
+        <%# f.text_field :nickname, hint: 'leave this field blank' %>
+    
+
+    <div>
+        <%= f.submit 'Envoyer', class: "btn btn-secondary" %>
+    </div>
+    </div>
+    <% end %>
+</div>
