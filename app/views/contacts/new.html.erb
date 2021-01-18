@@ -1,0 +1,8 @@
+<%= simple_form_for @contact do |f| %>
+    <div class="container">
+        <%= f.input :name, require: true, error: 'Username is mandatory, please specify one' %>
+        <%= f.input :email %>
+        <%= f.input :message, as: :text %>
+        <%= f.submit "Envoyer" %>
+    </div>
+<% end%>
