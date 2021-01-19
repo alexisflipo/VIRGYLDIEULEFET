@@ -1,0 +1,2 @@
+class ThumbnailVideo < ApplicationRecord
+end
