@@ -5,10 +5,10 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contact = Contact.new(params[:contact_params])
+    @contact = Contact.new(contact_params)
     if @contact.save
-      redirect_to root_path
-      flash[:notice] = "Contact successfully created"
+      redirect_to root_path, notice: "Message envoyé avec succès." + " " +
+      "Merci, je vous réponds dans les plus brefs délais."
     else 
       render :new
       flash[:alert] = "Something went wrong"
