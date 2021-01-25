@@ -1,6 +1,6 @@
 <div class="banner d-flex align-items-center">
-  <div class="container">
-      
+  <div class="container d-flex justify-content-center ">
+    <%= image_tag 'logo.png', class: "logo"  %>
   </div>
   <a class='icon-scroll' href="#"></a>
 </div>
@@ -10,43 +10,21 @@
 </div>
 
 </section>
-<div class="navbar d-flex justify-content-around">
-<%= link_to "Accueil", root_path, class:"nav-item" %>
-<%= link_to "Contact", new_contact_path, class:"nav-item" %>
-<%= link_to "A propos", about_path, class:"nav-item" %>
-<%= link_to "Galerie", galerie_path, class:"nav-item" %>
+<div class="maincarousel">
+<div class="carousel">
+	<figure>
+		<img src="https://source.unsplash.com/EbuaKnSm8Zw/800x533" alt="">
+		<img src="https://source.unsplash.com/kG38b7CFzTY/800x533" alt="">
+		<img src="https://source.unsplash.com/nvzvOPQW0gc/800x533" alt="">
+		<img src="https://source.unsplash.com/2lYHiNtjSwg/800x533" alt="">
+		<img src="https://source.unsplash.com/CjS3QsRuxnE/800x533" alt="">
+		<img src="https://source.unsplash.com/xxeAftHHq6E/800x533" alt="">
+		<img src="https://source.unsplash.com/bjhrzvzZeq4/800x533" alt="">
+		<img src="https://source.unsplash.com/7mUXaBBrhoA/800x533" alt="">
+	</figure>
+	<div class="switch">
+		<button class="button prev">Prev</button>
+		<button class="button next">Next</button>
+	</div>
 </div>
-
-<div class="main-carousel">
-  <div class="carousel">
-    <input type="checkbox" class="faux-ui-facia"> 
-    <div class="slide" slide="5" annot="This is the fifth slide title. Photo by David Marcu.">
-      <img src="https://ununsplash.imgix.net/uploads/141223808515744db9995/3361b5e1?q=75&fm=jpg&w=602" alt="Slide 5">
-    </div>
-    
-    
-    <input type="checkbox" class="faux-ui-facia"> 
-    <div class="slide" slide="4" annot="This is the fourth slide title. Photo by Ryan Lum.">
-      <img src="https://unsplash.imgix.net/photo-1415356838286-df6fd593e8b3?q=75&fm=jpg&w=600" alt="Slide 4">
-    </div>
-
-    <input type="checkbox" class="faux-ui-facia"> 
-    <div class="slide" slide="3" annot="This is the third slide title. Photo by Tomasz Paciorek.">
-      <img src="https://ununsplash.imgix.net/reserve/JaI1BywIT5Or8Jfmci1E_zakopane.jpg?q=75&fm=jpg&w=600"  alt="Slide 3">
-    </div>
-
-    <input type="checkbox" class="faux-ui-facia">
-    <div class="slide" slide="2" annot="This is the second slide title. Photo by S Charles.">
-      <img src="https://ununsplash.imgix.net/uploads/1413387158190559d80f7/6108b580?fit=crop&fm=jpg&q=75&w=600"  alt="Slide 2">
-    </div>
-
-    <input type="checkbox" class="faux-ui-facia">
-
-    <div class="slide" slide="1" annot="First slide title. Photo by Forrest Cavale.">
-      <img src="https://ununsplash.imgix.net/uploads/1413399939678471ea070/2c0343f7?q=75&fm=jpg&w=601" alt="Slide 1">
-    </div>
-    
-    <div class="counter" count="5"> / 5</div>
-  
-  </div>
 </div>
