@@ -13,7 +13,7 @@ $apothem: 482.842712474619px;
   justify-content: center;
   align-items: center;
   padding: 20px;
-
+  width: 100%;
   perspective: $viewer-distance;
   overflow: hidden;
 
@@ -32,6 +32,9 @@ $apothem: 482.842712474619px;
     transition: transform 0.5s;
     transform-origin: 50% 50% (-$apothem);
 
+    .zoom {
+      transform: scale(3);
+    }
     img {
       width: 100%;
       box-sizing: border-box;

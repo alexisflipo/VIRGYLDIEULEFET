@@ -27,9 +27,11 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { initUpdateNavbarOnScroll } from "../components/navbar";
 import { displayCarousel } from "../components/carousel";
+import { zoom } from "../components/zoom";
 document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
   // initSelect2();
   initUpdateNavbarOnScroll();
   displayCarousel();
+  zoom();
 });
