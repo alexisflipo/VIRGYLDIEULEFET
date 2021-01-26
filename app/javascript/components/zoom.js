@@ -12,7 +12,7 @@ const zoom = () => {
   function close() {
     overlay.classList.remove("open");
   }
-  console.log("A");
+
   buttons.forEach((button) => button.addEventListener("click", open));
   overlay.addEventListener("click", close);
 };

@@ -33,20 +33,5 @@ document.addEventListener("turbolinks:load", () => {
   // initSelect2();
   initUpdateNavbarOnScroll();
   displayCarousel();
-  console.log("A");
-  const buttons = document.querySelectorAll(".project button");
-  const overlay = document.querySelector(".overlay");
-  const overlayImage = document.querySelector(".overlay__inner img");
-  function open(e) {
-    overlay.classList.add("open");
-    const src = e.currentTarget.querySelector("img").src;
-    overlayImage.src = src;
-  }
-
-  function close() {
-    overlay.classList.remove("open");
-  }
-
-  buttons.forEach((button) => button.addEventListener("click", open));
-  overlay.addEventListener("click", close);
+  zoom();
 });
