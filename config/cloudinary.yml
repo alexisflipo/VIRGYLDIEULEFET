@@ -1,0 +1,12 @@
+development:
+  cloud_name: "alex-web-dev-full-stack"
+  api_key: "328728872846887"
+  api_secret: "nkBOM08NNVBsmTomG76Oo5qFR8w"
+  secure: true
+  cdn_subdomain: true
+production:
+  cloud_name: "alex-web-dev-full-stack"
+  api_key: "328728872846887"
+  api_secret: "nkBOM08NNVBsmTomG76Oo5qFR8w"
+  secure: true
+  cdn_subdomain: true

@@ -28,7 +28,7 @@
 <section id="galery">
     <% @thumbnail_imgs.each do |img| %>
 		<div class="project">
-       <%= image_tag url_for(img.photo), class:"project__image" %>
+       <%= image_tag img.photo, class:"project__image" %>
       <div class="grid__overlay">
         <button class="viewbutton">Voir plus</button>
       </div>

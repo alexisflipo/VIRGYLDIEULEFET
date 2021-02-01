@@ -2,7 +2,7 @@ ActiveAdmin.register ThumbnailImg do
   permit_params :photo
   form :html => { :multipart => true } do |f|
     f.inputs "Upload" do
-      f.input :photo, as: :file
+      f.input :photo, as: :file, direct_upload: true
     end
     f.actions
   end
