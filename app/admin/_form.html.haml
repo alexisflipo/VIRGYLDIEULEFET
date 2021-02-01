@@ -1,0 +1,7 @@
+
+= semantic_form_for [:admin, @thumbnail_img], builder: ActiveAdmin::FormBuilder do |f|
+  = f.inputs do
+    = f.input :photo
+    = f.input :image, as: :file
+    = f.actions
+= end

@@ -12,11 +12,12 @@ $ease: all 0.3s ease-in-out;
 #galery {
   width: 100%;
   min-height: 100vh;
-  background: $white;
+  height: auto;
+  background: black;
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, minmax(200px, 1fr));
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  grid-template-rows: 1fr 2fr 1fr
   grid-gap: 2px;
 }
 .galery-title {
@@ -25,8 +26,10 @@ $ease: all 0.3s ease-in-out;
 }
 
 .project {
+  width: 100%;
+  height: inherit;
   position: relative;
-  background: grey;
+  background: black;
   overflow: hidden;
   img {
     position: absolute;
@@ -92,11 +95,16 @@ button {
 
 .overlay__inner {
   background: transparent;
-  width: auto;
+  width: 100%;
   padding: 20px;
   position: relative;
 }
-
+.overlay img {
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  background-size: cover;
+}
 .close {
   position: absolute;
   top: 25px;
@@ -114,5 +122,9 @@ button {
 }
 
 .project__image {
-  margin-left: -50%;
+  margin-left: 0;
+}
+.project img {
+  max-width: 100%;
+  max-height: 100%;
 }
