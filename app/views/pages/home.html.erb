@@ -6,21 +6,32 @@
   </div>
   <a class='icon-scroll' href="#"></a>
 </div>
-<div class="maincarousel d-flex justify-content-center ">
-	<div class="carousel">
-		<figure>
-		<video width="300" height="250" controls>
-		<% @thumbnail_videos.each do |vid| %>
-		<source src="<%= url_for(vid.video) %>">
-			<% end %>
-		</video>
-		</figure>
-		<div class="switch mt-5">
-			<button class="button prev">Prev</button>
-			<button class="button next">Next</button>
-		</div>
-			
-	</div>
+/* CAROUSEL */
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators3" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+  <% @thumbnail_videos.each do |vid| %>
+    <div class="carousel-item active">
+	  <video controls style="width: 600px" class="d-block w-75" src="<%=url_for(vid.video)%>"></video>
+    </div>
+	<% end %>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators3" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+		
+
 </div>
 <h1 class="galery-title text-center">GALERIE</h1>
 <section id="galery">
