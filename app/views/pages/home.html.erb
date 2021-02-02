@@ -6,26 +6,25 @@
   </div>
   <a class='icon-scroll' href="#"></a>
 </div>
-<div class="maincarousel d-flex justify-content-center">
+<div class="maincarousel d-flex justify-content-center ">
 	<div class="carousel">
 		<figure>
-			<img src="https://picsum.photos/600/500" alt="">
-			<img src="https://picsum.photos/600/500" alt="">
-			<img src="https://picsum.photos/600/500" alt="">
-			<img src="https://picsum.photos/600/500" alt="">
-			<img src="https://picsum.photos/600/500" alt="">
-			<img src="https://picsum.photos/600/500" alt="">
-			<img src="https://picsum.photos/600/500" alt="">
-			<img src="https://picsum.photos/600/500" alt="">
+		<video width="300" height="250" controls>
+		<% @thumbnail_videos.each do |vid| %>
+		<source src="<%= url_for(vid.video) %>">
+			<% end %>
+		</video>
 		</figure>
 		<div class="switch mt-5">
 			<button class="button prev">Prev</button>
 			<button class="button next">Next</button>
 		</div>
+			
 	</div>
 </div>
 <h1 class="galery-title text-center">GALERIE</h1>
 <section id="galery">
+	<% if @thumnail_imgs.present?%>
     <% @thumbnail_imgs.each do |img| %>
 		<div class="project">
        <%= image_tag img.photo, class:"project__image" %>
@@ -34,7 +33,7 @@
       </div>
     </div>
       <% end %>
-
+	<% end %>
     <div class="overlay">
       <div class="overlay__inner">
         <button class="close">close X</button>

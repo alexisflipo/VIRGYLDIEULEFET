@@ -1,15 +1,11 @@
-ActiveAdmin.register ThumbnailImg do
-  permit_params :photo
-
+ActiveAdmin.register ThumbnailVideo do
+  permit_params :video
   config.filters = false
 
   index do
     actions
-    column :photo do |img|
-      image_tag img.photo, style:"height: 100px"
-    end
-    column :name do |img|
-      img.photo.attachment.filename.to_s
+    column :name do |vid|
+    vid.video.attachment.filename.to_s
     end
     column :id
     column :created_at
@@ -18,17 +14,14 @@ ActiveAdmin.register ThumbnailImg do
 
   show do 
     attributes_table do
-    row :photo do |img|
-      image_tag img.photo, style:"height: 100px"
-    end
-    row :name do |img|
-      img.photo.attachment.filename.to_s
+    row :video do |vid|
+      vid.video.filename.to_s
     end
   end
   end
   form do |f|
     f.inputs "Uploads" do
-      f.input :photo, as: :file, direct_upload: true
+      f.input :video, as: :file, direct_upload: true
     end
     f.actions
   end
@@ -47,3 +40,4 @@ end
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
+

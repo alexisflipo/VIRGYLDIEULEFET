@@ -12,7 +12,7 @@ class ThumbnailImgController < ApplicationController
   end
 
   def create
-    
+
   end
 
   def destroy
