@@ -16,7 +16,9 @@ ActiveAdmin.register_page "Dashboard" do
         panel "Recent Photos" do
           ul do
             ThumbnailImg.last(5).map do |img|
+              if img.photo.attached?
               li link_to(img.photo.filename.to_s, edit_admin_thumbnail_img_path(img.id))
+              end
             end
           end
         end
@@ -27,7 +29,9 @@ ActiveAdmin.register_page "Dashboard" do
           panel "Recent Videos" do
             ul do
               ThumbnailVideo.last(5).map do |video|
+                if video.video.attached?
                 li link_to(video.video.filename.to_s, edit_admin_thumbnail_video_path(video.id))
+                end
               end
             end
           end

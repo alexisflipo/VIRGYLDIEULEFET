@@ -6,17 +6,9 @@
   height: 100vh;
 }
 
-.banner h1 {
-  margin: 0;
-  color: #bee5d3;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  font-size: 32px;
-  font-weight: bold;
-}
-
 .banner p {
   font-size: 20px;
-  color: white;
+  color: #c19e6c;
   opacity: 0.7;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
@@ -30,11 +22,30 @@
   width: 100%;
   height: 100%;
 }
-.logo-production h3 {
-  color: black;
-}
-.logo-production h2 {
-  color: black;
-  margin-top: -10px;
+
+.banner h1 {
+  color: #c29f6d !important;
   font-weight: bold;
+  font-size: 50px;
+  position: absolute;
+  top: 11%;
+  font-family: "Roboto";
+  letter-spacing: 10px;
+}
+
+.banner h3 {
+  color: #f9f6e8;
+  position: absolute;
+  font-family: "Anton";
+  letter-spacing: 30px;
+  top: 20%;
+  font-size: 160px;
+}
+
+.banner h5 {
+  position: absolute;
+  top: 40%;
+  color: white;
+  font-family: "Roboto";
+  letter-spacing: 4px;
 }

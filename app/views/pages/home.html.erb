@@ -1,50 +1,33 @@
-<div class="banner d-flex justify-content-center">
-  <div class="logo-production">
-    <%= image_tag 'logo.png', class: "logo"  %>
-	<h2 class="text-center mb-2">- Divid Production -</h2>
-	<h3 class="text-center">Video - Photo - Drone</h3>
-  </div>
+<div class="banner d-flex flex-column align-items-center">
+    <h1 class="text-center">PORTFOLIO</h1>
+    <h3 class="text-center">DIVID</h3>
+    <h5 class= "text-center"> VIDÉO IMMOBLILIÈRE . PHOTOGRAPHE </h5>
   <a class='icon-scroll' href="#"></a>
 </div>
-/* CAROUSEL */
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators3" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-  <% @thumbnail_videos.each do |vid| %>
-    <div class="carousel-item active">
-	  <video controls style="width: 600px" class="d-block w-75" src="<%=url_for(vid.video)%>"></video>
-    </div>
-	<% end %>
+<h1 class="galery-title text-center">VIDEOS</h1>
+<section id="videos">
+  <div class="container d-flex flex-column align-items-center">
+    <% @thumbnail_videos.each do |vid| %> 
+      <% if vid.video.attached?%>
+          <video width="854" height="480" controls src="<%=url_for(vid.video)%>" data-aos="fade-<%= vid.direction %>" data-aos-duration="3000" class="my-5"></video>
+      <% end %>
+    <% end %>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators3" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
-		
-
-</div>
-<h1 class="galery-title text-center">GALERIE</h1>
+</section>
+	
+<h1 class="galery-title text-center">PHOTOS</h1>
 <section id="galery">
-	<% if @thumnail_imgs.present?%>
+	
     <% @thumbnail_imgs.each do |img| %>
 		<div class="project">
+      <% if img.photo.attached?%>
        <%= image_tag img.photo, class:"project__image" %>
       <div class="grid__overlay">
         <button class="viewbutton">Voir plus</button>
       </div>
     </div>
       <% end %>
-	<% end %>
+      <% end %>
     <div class="overlay">
       <div class="overlay__inner">
         <button class="close">close X</button>
@@ -64,7 +47,10 @@
 			<div class="image"><img src="https://media-exp1.licdn.com/dms/image/C4D03AQGak5YJjdGOEw/profile-displayphoto-shrink_800_800/0/1596871376513?e=1617235200&v=beta&t=mMwlCtDtNwxPWXE6oIVVBd6SEny_ounq2kZ5GlZJ_uw" alt="sample4"/></div>
 			<div class="position">Videaste - Photographe </div>
 		</figure>
-		<p class="mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius voluptatibus quo nostrum deleniti obcaecati debitis alias velit dolor repellendus. Ducimus, velit repudiandae dolore voluptatum non eveniet? Rem voluptas iure quisquam esse illum? Dicta laborum doloribus porro quam nostrum, voluptatibus nihil aliquam modi corporis possimus veniam vel saepe rerum enim consectetur.</p>
+		<p class="mt-3 text-justify">Passionné dde vidéographie et de photos depuis mon enfance, autodidacte, fruit d'une expérience riche et variée, l'entreprise DIVID PRODUCTION vous propose des prestations de qualité pour tous types de publicité visant à enrichir l'image de votre société.
+    L'esthétisme épuré de mes productions assurera une image de confiance et de professionnalisme. Exigeant dans les moindres détails, la minutie a son importance.
+    Pour toute demande de devis personnalisé, veuillez me contacter via l'onglet "Contact", je me ferai un réel plaisir de vous répondre dans les plus brefs délais.
+    DIVID</p>
 	</div>
   
 </section>
