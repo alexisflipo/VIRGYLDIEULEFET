@@ -26,9 +26,9 @@
 .banner h1 {
   color: #c29f6d !important;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 35px;
   position: absolute;
-  top: 11%;
+  top: 12%;
   font-family: "Roboto";
   letter-spacing: 10px;
 }
@@ -37,9 +37,10 @@
   color: #f9f6e8;
   position: absolute;
   font-family: "Anton";
-  letter-spacing: 30px;
+  letter-spacing: 20px;
   top: 18%;
-  font-size: 160px;
+  font-size: 140px;
+  margin-left: 15px;
 }
 
 .banner h5 {
@@ -47,5 +48,4 @@
   top: 38%;
   color: white;
   font-family: "Roboto";
-  letter-spacing: 4px;
 }
