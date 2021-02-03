@@ -1,8 +1,9 @@
 <nav class="hidden fixed-top">
-<%= link_to "Accueil", root_path, class:"nav-item ml-5" %>
-<%= link_to "Videos", href="#videos", class:"nav-item ml-5" %>
-<%= link_to "Photos", href="#galery", class:"nav-item ml-5" %>
-<%= link_to "A propos", href="#a-propos", class:"nav-item ml-5" %>
-<%= link_to "Contact", new_contact_path, class:"nav-item ml-5" %>
-<div id="indicator"></div>
+    <ul class="menu">
+        <li><%= link_to "Accueil", root_path %></li>
+        <li><%= link_to "Videos", href="#videos" %></li>
+        <li><%= link_to "Photos", href="#galery" %></li>
+        <li><%= link_to "A propos", href="#a-propos" %></li>
+        <li><%= link_to "Contact", new_contact_path %></li>
+    </ul>
 </nav>

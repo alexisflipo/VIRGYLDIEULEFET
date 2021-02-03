@@ -1,118 +1,47 @@
-nav {
-  position: absolute;
-  right: 0;
-  left: 0;
-  width: 500px;
-  display: table;
-  margin: 50px auto;
-  transform: translateY(-50%);
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  height: 100px;
+  padding-left: 0px;
+  list-style: none;
+  background-color: rgba(97, 95, 95, 0.7);
 }
 
-nav a {
-  position: relative;
-  width: 33.33%;
-  display: table-cell;
+.menu li {
+  width: 125px;
+  height: 50px;
+  transition: background-position-x 0.9s linear;
   text-align: center;
-  color: white;
-  text-decoration: none !important;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  padding: 10px 20px;
-  transition: 0.2s ease color;
+
+  a {
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.45s;
+  }
+
+  &:hover {
+    background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEi%0D%0AIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhs%0D%0AaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0%0D%0AaD0iMzkwcHgiIGhlaWdodD0iNTBweCIgdmlld0JveD0iMCAwIDM5MCA1MCIgZW5hYmxlLWJhY2tn%0D%0Acm91bmQ9Im5ldyAwIDAgMzkwIDUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0i%0D%0Abm9uZSIgc3Ryb2tlPSIjZDk0ZjVjIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGlt%0D%0AaXQ9IjEwIiBkPSJNMCw0Ny41ODVjMCwwLDk3LjUsMCwxMzAsMAoJYzEzLjc1LDAsMjguNzQtMzgu%0D%0ANzc4LDQ2LjE2OC0xOS40MTZDMTkyLjY2OSw0Ni41LDI0My42MDMsNDcuNTg1LDI2MCw0Ny41ODVj%0D%0AMzEuODIxLDAsMTMwLDAsMTMwLDAiLz4KPC9zdmc+Cg==");
+    animation: line 1s;
+  }
+
+  &:hover a {
+    color: #d94f5c;
+  }
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
-nav a:before,
-nav a:after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  transform: scale(0);
-  transition: 0.2s ease transform;
-}
-
-nav a:before {
-  top: 0;
-  left: 10px;
-  width: 6px;
-  height: 6px;
-}
-
-nav a:after {
-  top: 5px;
-  left: 18px;
-  width: 4px;
-  height: 4px;
-}
-
-nav a:nth-child(1):before {
-  background-color: yellow;
-}
-
-nav a:nth-child(1):after {
-  background-color: red;
-}
-
-nav a:nth-child(2):before {
-  background-color: #00e2ff;
-}
-
-nav a:nth-child(2):after {
-  background-color: #89ff00;
-}
-
-nav a:nth-child(3):before {
-  background-color: purple;
-}
-
-nav a:nth-child(3):after {
-  background-color: palevioletred;
-}
-
-nav a:nth-child(4):before {
-  background-color: yellow;
-}
-
-nav a:nth-child(4):after {
-  background-color: green;
-}
-#indicator {
-  position: absolute;
-  left: 7%;
-  bottom: 0;
-  width: 30px;
-  height: 3px;
-  background-color: #fff;
-  border-radius: 5px;
-  transition: 0.2s ease left;
-}
-
-nav a:hover {
-  color: #fff;
-}
-
-nav a:hover:before,
-nav a:hover:after {
-  transform: scale(1);
-}
-
-nav a:nth-child(1):hover ~ #indicator {
-  background: linear-gradient(130deg, yellow, red);
-  left: 7%;
-}
-
-nav a:nth-child(2):hover ~ #indicator {
-  left: 33%;
-  background: linear-gradient(130deg, #00e2ff, #89ff00);
-}
-
-nav a:nth-child(3):hover ~ #indicator {
-  left: 57%;
-  background: linear-gradient(130deg, purple, palevioletred);
-}
-
-nav a:nth-child(4):hover ~ #indicator {
-  left: 82%;
-  background: linear-gradient(130deg, yellow, green);
+@keyframes line {
+  0% {
+    background-position-x: 390px;
+  }
 }
 
 .active {
