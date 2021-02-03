@@ -96,7 +96,7 @@ button {
 
 .overlay__inner {
   background: transparent;
-  width: 100%;
+  width: auto;
   padding: 20px;
   position: relative;
 }
@@ -108,8 +108,8 @@ button {
 }
 .close {
   position: absolute;
-  top: 25px;
-  right: 30px;
+  top: 20%;
+  right: 20%;
   background: none;
   outline: 0;
   color: rgb(68, 68, 68);

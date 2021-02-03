@@ -1,0 +1,49 @@
+.bg-contact {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url(surf.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  width: 100%;
+  position: absolute;
+}
+.bg-contact h1 {
+  margin-top: 100px;
+}
+.chat {
+  color: #b3976c;
+  border-bottom: 1px solid #b3976c;
+}
+.surf-parts {
+  width: 150px;
+}
+.surf {
+  margin-top: 50px;
+}
+
+.surf-chat {
+  color: #b3976c;
+}
+.bg-contact input {
+  background-color: transparent;
+  margin-bottom: 10px;
+  border: 1px solid white;
+}
+
+.bg-contact ::placeholder {
+  color: white;
+}
+
+.bg-contact textarea {
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.submit-btn {
+  color: white;
+  height: 40px;
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}
