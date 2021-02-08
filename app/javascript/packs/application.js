@@ -28,10 +28,18 @@ import "bootstrap";
 import { initUpdateNavbarOnScroll } from "../components/navbar";
 import { displayCarousel } from "../components/carousel";
 import { zoom } from "../components/zoom";
+import { galery } from "../components/lightbox";
+
 document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
   // initSelect2();
   initUpdateNavbarOnScroll();
   AOS.init();
   zoom();
+  galery();
 });
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   var elems = document.querySelectorAll(".materialboxed");
+//   var instances = M.Materialbox.init(elems);
+// });

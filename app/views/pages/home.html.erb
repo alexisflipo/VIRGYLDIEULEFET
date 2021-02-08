@@ -17,23 +17,19 @@
 	
 <h1 class="galery-title text-center">PHOTOS</h1>
 <section id="galery">
-	
-    <% @thumbnail_imgs.each do |img| %>
-		<div class="project">
-      <% if img.photo.attached?%>
-       <%= image_tag img.photo, class:"project__image" %>
-      <div class="grid__overlay">
-        <button class="viewbutton">Voir plus</button>
-      </div>
-    </div>
+	<% count = 0%>
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <% @thumbnail_imgs.each do |img| %>
+        <% if img.photo.attached?%>
+        <a href="<%= url_for(img.photo) %>" target="blank" class="col-sm-12 col-md-6 col-lg-5 col-xl-5">
+        <%= image_tag img.photo, class:"photo-galery"%>
+        </a>
+        <% end %>
       <% end %>
-      <% end %>
-    <div class="overlay">
-      <div class="overlay__inner">
-        <button class="close">close X</button>
-        <img>
-      </div>
     </div>
+   </div>
+   
 </section>
 <section id="a-propos">
 	<h1 class="galery-title text-center">À PROPOS</h1>
