@@ -17,14 +17,13 @@
 	
 <h1 class="galery-title text-center">PHOTOS</h1>
 <section id="galery">
-	<% count = 0%>
   <div class="container">
     <div class="row d-flex justify-content-center">
+    <% count = 0%>
       <% @thumbnail_imgs.each do |img| %>
+      <% count += 1 %>
         <% if img.photo.attached?%>
-        <a href="<%= url_for(img.photo) %>" target="blank" class="col-sm-12 col-md-6 col-lg-5 col-xl-5">
-        <%= image_tag img.photo, class:"photo-galery"%>
-        </a>
+       <%= image_tag img.photo, class:"photo-galery col-sm-12 col-md-6 col-lg-5 col-xl-5"%>
         <% end %>
       <% end %>
     </div>

@@ -3,6 +3,7 @@
   height: auto;
   padding: 0px;
   margin: 10px 10px;
+  cursor: pointer;
 }
 
 .lightbox {
@@ -15,8 +16,11 @@
   z-index: 10;
   overflow: auto;
   animation: lightboxIn 0.5s;
+  transition: opacity 0.5s;
 }
-
+.lightbox.fadeOut {
+  opacity: 0;
+}
 .lightbox__next,
 .lightbox__prev {
   border: none;
@@ -44,7 +48,7 @@
   background: url("cross.svg") center center / 100% 100% no-repeat transparent;
   position: fixed;
   text-indent: -3000px;
-  top: 20px;
+  top: 130px;
   right: 10px;
   z-index: 12;
 }
