@@ -3,12 +3,13 @@
     url(surf.jpeg);
   background-size: cover;
   background-position: center;
-  height: auto;
+  position: fixed;
+  height: 100%;
   width: 100%;
-  position: absolute;
+  overflow: scroll;
 }
 .bg-contact h1 {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .chat {
   color: #b3976c;

@@ -9,9 +9,7 @@ const galery = () => {
       dom.setAttribute("id", "parent");
       img.src = e.target.src;
       dom.classList.add("lightbox");
-      dom.innerHTML = `<button id="child" class="lightbox__close">FERMER</button>
-        <button class="lightbox__next">SUIVANT</button>
-        <button class="lightbo__prev">PRECEDENT</button>
+      dom.innerHTML = `<button id="child" class="lightbox__close"></button>
         <div class="lightbox__container">
           <img src="${img.src}" alt="">
         </div>`;
