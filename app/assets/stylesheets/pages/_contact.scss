@@ -14,14 +14,21 @@
 .chat {
   color: #b3976c;
   border-bottom: 1px solid #b3976c;
+  width: 150px;
 }
 .surf-parts {
-  width: 150px;
+  width: auto;
 }
 .surf {
   margin-top: 50px;
 }
+.form input {
+  max-width: 100%;
+}
 
+.form textarea {
+  max-width: 100%;
+}
 .surf-chat {
   color: #b3976c;
 }
@@ -46,5 +53,10 @@
   &:hover {
     background-color: white;
     color: black;
+  }
+}
+@media (max-width: 568px) {
+  .chat {
+    width: 100%;
   }
 }
