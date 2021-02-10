@@ -1,0 +1,19 @@
+#videos {
+  min-height: 100vh;
+  max-width: 100%;
+}
+
+#videos video {
+  max-width: 100%;
+  height: auto;
+}
+#videos .container {
+  overflow: hidden;
+}
+
+@media (max-width: 568px) {
+  #videos video {
+    max-width: 100%;
+    height: auto;
+  }
+}

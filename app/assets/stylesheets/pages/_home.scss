@@ -2,8 +2,16 @@
 body {
   background-color: black;
   color: white;
+  max-width: 100%;
 }
 
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
+}
+
+@media (max-width: 568px) {
+  html {
+    max-width: 100% !important;
+  }
 }

@@ -4,21 +4,21 @@
     <h5 class= "text-center"> VIDÉO IMMOBLILIÈRE . PHOTOGRAPHE </h5>
   <a class='icon-scroll' href="#"></a>
 </div>
-<h1 class="galery-title text-center">VIDEOS</h1>
+<h1 class="section-icon text-center"><i class="fas fa-video my-5"></i></h1>
 <section id="videos">
   <div class="container d-flex flex-column align-items-center">
     <% @thumbnail_videos.each do |vid| %> 
       <% if vid.video.attached?%>
-          <video width="854" height="480" controls src="<%=url_for(vid.video)%>" data-aos="fade-<%= vid.direction %>" data-aos-duration="3000" class="my-5"></video>
+          <video controls src="<%=url_for(vid.video)%>" data-aos="fade-<%= vid.direction %>" data-aos-duration="3000" class="my-5"></video>
       <% end %>
     <% end %>
   </div>
 </section>
 	
-<h1 class="galery-title text-center">PHOTOS</h1>
+<h1 class="section-icon text-center"><i class="fas fa-camera"></i></h1>
 <section id="galery">
-  <div class="container">
-    <div class="row d-flex justify-content-center">
+  <div class="container mb-5">
+    <div class="row mx-1 d-flex justify-content-center">
     <% count = 0%>
       <% @thumbnail_imgs.each do |img| %>
       <% count += 1 %>
@@ -31,9 +31,9 @@
    
 </section>
 <section id="a-propos">
-	<h1 class="galery-title text-center">À PROPOS</h1>
+	<h1 class="section-icon text-center"><i class="fas fa-user"></i></h1>
 	<div class="container d-flex flex-column align-items-center">
-		<figure class="snip0057 red hover">
+		<figure class="snip0057 red hover mt-5">
 			<figcaption>
 				<h2>Virgyl <span>Dieulefet</span></h2>
 				<h5 class="mt-1 text-center"><i class="fas fa-map-marker-alt">  </i> La Rochelle </h5>

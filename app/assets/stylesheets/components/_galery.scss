@@ -1,15 +1,22 @@
+#galery {
+  min-height: 100vh;
+  margin-top: 100px;
+}
 .photo-galery {
-  width: 400px;
+  width: auto;
   height: auto;
   padding: 0px;
-  margin: 0px;
   cursor: pointer;
 
   &:hover {
     opacity: 0.5;
   }
 }
-
+.section-icon {
+  color: grey;
+  font-size: 40px;
+  margin: 20px 0;
+}
 .lightbox {
   position: fixed;
   top: 0;
@@ -86,5 +93,12 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 568px) {
+  .photo-galery {
+    max-width: 100%;
+    margin: 0px 10px;
   }
 }
