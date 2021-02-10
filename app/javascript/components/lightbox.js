@@ -26,6 +26,15 @@ const galery = () => {
             close.parentNode.remove(overlay);
           }, 500);
         });
+        window.addEventListener("keydown", (e) => {
+          const escape = e.key;
+          if (escape === "Escape") {
+            overlay.classList.add("fadeOut");
+            window.setTimeout(() => {
+              close.parentNode.remove(overlay);
+            }, 500);
+          }
+        });
       }
     });
   });
