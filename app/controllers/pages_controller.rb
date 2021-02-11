@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   def home
     @thumbnail_imgs = ThumbnailImg.all
     @thumbnail_videos = ThumbnailVideo.all
+    
   end
 
   def about

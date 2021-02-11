@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h3> Confirmation d'envoi </h3>
+    <p> Bonjour <%= @contact.name %>, bienvenue chez Dividproduction ! </p>
+    <p>
+    Récapitulatif<br>
+    --------------------------
+    </p>
+    <p>Nom <%= @contact.name %></p>
+    <p>Email: <%= @contact.email %></p>
+    Message:<br>
+    ----------
+    </p>
+    <p><%= @contact.message %></p>
+
+    <p>Merci de m'avoir contacté</p>
+    <p>Je vous réponds dans les plus brefs délais</p>
+    <p>À bientôt</p>
+  </body>
+</html>
