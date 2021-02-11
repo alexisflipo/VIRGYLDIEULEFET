@@ -4,7 +4,9 @@ body {
   color: white;
   max-width: 100%;
 }
-
+.scroll-disable {
+  overflow-y: hidden;
+}
 html {
   scroll-behavior: smooth;
   max-width: 100%;

@@ -35,9 +35,9 @@
     color: #d94f5c;
   }
 
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
+  // &:not(:last-child) {
+  //   margin-right: 30px;
+  // }
 }
 
 @keyframes line {
@@ -53,4 +53,25 @@
 
 .hidden {
   visibility: hidden;
+}
+
+.disabled {
+  display: none;
+}
+
+@media (max-width: 568px) {
+  .menu {
+    height: 60px;
+  }
+  .menu li {
+    height: 20px;
+    margin-right: 0px;
+    a {
+      font-size: 14px;
+      color: white;
+      text-decoration: none;
+
+      transition: all 0.45s;
+    }
+  }
 }

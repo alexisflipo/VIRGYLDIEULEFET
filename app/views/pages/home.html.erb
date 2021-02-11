@@ -9,7 +9,7 @@
   <div class="container d-flex flex-column align-items-center">
     <% @thumbnail_videos.each do |vid| %> 
       <% if vid.video.attached?%>
-          <video controls src="<%=url_for(vid.video)%>" data-aos="fade-<%= vid.direction %>" data-aos-duration="3000" class="my-5"></video>
+          <video controls volumeslider disablePictureInPicture controlsList="nodownload" src="<%=url_for(vid.video)%>" data-aos="fade-<%= vid.direction %>" data-aos-duration="3000" class="my-5"></video>
       <% end %>
     <% end %>
   </div>
@@ -23,7 +23,7 @@
       <% @thumbnail_imgs.each do |img| %>
       <% count += 1 %>
         <% if img.photo.attached?%>
-       <%= image_tag img.photo, class:"photo-galery col-sm-12 col-md-3 col-lg-3 col-xl-3"%>
+       <%= image_tag img.photo, class:"photo-galery col-sm-12 col-md-3 col-lg-3 col-xl-4"%>
         <% end %>
       <% end %>
     </div>
@@ -42,7 +42,7 @@
 			<div class="image"><img src="https://media-exp1.licdn.com/dms/image/C4D03AQGak5YJjdGOEw/profile-displayphoto-shrink_800_800/0/1596871376513?e=1617235200&v=beta&t=mMwlCtDtNwxPWXE6oIVVBd6SEny_ounq2kZ5GlZJ_uw" alt="sample4"/></div>
 			<div class="position">Videaste - Photographe </div>
 		</figure>
-		<p class="my-5 text-justify">Passionné dde vidéographie et de photos depuis mon enfance, autodidacte, fruit d'une expérience riche et variée, l'entreprise DIVID PRODUCTION vous propose des prestations de qualité pour tous types de publicité visant à enrichir l'image de votre société.
+		<p class="my-5 text-justify">Passionné de vidéographie et de photos depuis mon enfance, autodidacte, fruit d'une expérience riche et variée, l'entreprise DIVID PRODUCTION vous propose des prestations de qualité pour tous types de publicité visant à enrichir l'image de votre société.
     L'esthétisme épuré de mes productions assurera une image de confiance et de professionnalisme. Exigeant dans les moindres détails, la minutie a son importance.
     Pour toute demande de devis personnalisé, veuillez me contacter via l'onglet "Contact", je me ferai un réel plaisir de vous répondre dans les plus brefs délais.
     DIVID</p>
@@ -50,14 +50,13 @@
   
 </section>
 <div class="footer">
-    <%= image_tag 'logo.png', class: "logo-footer"  %>
+    <%= image_tag 'logo.png', class: "logo-footer text-center"  %>
   <div class="footer-links">
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.instagram.com/divideomaker/" target="blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/virgyl.dieulefet.1" target="blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.linkedin.com/in/virgyl-dieulefet-3b05651b4/" target="blank"><i class="fab fa-linkedin"></i></a>
   </div>
   <div class="footer-copyright d-flex justify-content-center my-3">
-   Site web développé par <a href="https://www.alexisflipo.com" target='blank' class="dev-link">Alexis Flipo</a>
+  <p class="text-center">Site web développé par <a href="https://www.alexisflipo.com" target='blank' class="dev-link">Alexis Flipo</a> </p>
   </div>
 </div>
