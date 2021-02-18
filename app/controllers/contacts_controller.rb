@@ -6,13 +6,13 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-    if @contact.save
+    if @contact.save!
       ContactMailer.with(contact: @contact).contact_email(@contact).deliver_later
-      ContactMailer.admin_email.deliver_later
-      redirect_to root_path, notice: "Message envoyé avec succès." + " " +
-      "Merci, je vous réponds dans les plus brefs délais."
+      # ContactMailer.with(contact: @contact).admin_email(@contact).deliver_later
+      # redirect_to root_path, notice: "Message envoyé avec succès." + " " +
+      # "Merci, je vous réponds dans les plus brefs délais."
     else 
-      flash[:alert] = "Oups.. un problème est survenu. Le message n'a pas pu être envoyé. Veuillez réessayer ultérieurement."
+      flash[:alert] = "Un problème est survenu, veuillez réessayer ultérieurement"
       render :new
     end
   end

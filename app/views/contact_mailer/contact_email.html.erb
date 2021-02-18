@@ -1,23 +1,59 @@
-<html>
-  <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-  </head>
-  <body>
-    <h3> Confirmation d'envoi </h3>
-    <p> Bonjour <%= @contact.name %>, bienvenue chez Dividproduction ! </p>
-    <p>
-    Récapitulatif<br>
-    --------------------------
-    </p>
-    <p>Nom <%= @contact.name %></p>
-    <p>Email: <%= @contact.email %></p>
-    Message:<br>
-    ----------
-    </p>
-    <p><%= @contact.message %></p>
+<style>
+    body {
+      background-color: white;
+      max-width: 100%;
+    }
 
-    <p>Merci de m'avoir contacté</p>
-    <p>Je vous réponds dans les plus brefs délais</p>
-    <p>À bientôt</p>
-  </body>
-</html>
+    body p {
+      font-size: 18px;
+    }
+
+    body h3 {
+      font-size: 24px;
+    }
+    body h4 {
+      font-size: 20px;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    .logo {
+      height: 200px;
+      width: 300px;
+    }
+  .link {
+    text-decoration: none;
+    color: grey
+  }
+  .link:hover {
+    color: black
+  }
+  .recap{
+    font-size: 20px;
+    text-align: center;
+  }
+  </style>
+  <body style="background-color:white;max-width:100%;" >
+  <div class="container" style="display:flex;justify-content:center;flex-direction:column;align-items:center;" >
+    <img src="https://res.cloudinary.com/virgyldieulefet/image/upload/v1613658543/logo_pu6a5v.png" class="logo" alt="site web logo" style="height:200px;width:300px;" >
+    <h3 style="font-size:24px;" > Confirmation d'envoi </h3>
+    <h4 style="font-size:20px;" > Bonjour <%= @contact.name.capitalize %>, bienvenue chez <a href="https://www.dividproduction.com" class="link" style="text-decoration:none;color:grey;" >Dividproduction</a> !</h4>
+    <p class="recap" style="font-size:20px;text-align:center;" >
+        Récapitulatif 
+    <br> -----------------
+    </p>
+    <div>
+    <p style="font-size:18px;" >Nom: <%= @contact.name.capitalize %></p>
+    <p style="font-size:18px;" >Email: <%= @contact.email %></p>
+   <p style="font-size:18px;" >
+      Message: <%= @contact.message %>
+    </p>
+    </div>
+
+    <p style="font-size:18px;" >Merci de m'avoir contacté</p>
+    <p style="font-size:18px;" >Je vous réponds dans les plus brefs délais</p>
+    <p style="font-size:18px;" >À bientôt</p>
+  </div>

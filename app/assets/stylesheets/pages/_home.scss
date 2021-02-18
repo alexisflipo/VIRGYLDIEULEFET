@@ -3,6 +3,7 @@ body {
   background-color: black;
   color: white;
   max-width: 100%;
+  scroll-behavior: smooth;
 }
 .scroll-disable {
   overflow-y: hidden;

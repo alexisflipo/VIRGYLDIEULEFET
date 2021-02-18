@@ -1,6 +1,6 @@
 .banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url(LANTERNON.jpeg);
+    url("https://res.cloudinary.com/virgyldieulefet/image/upload/v1613659644/LANTERNON_fbcimp.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -28,7 +28,7 @@
   font-weight: bold;
   font-size: 35px;
   position: absolute;
-  top: 15%;
+  top: 14%;
   font-family: "Roboto";
   letter-spacing: 10px;
 }
@@ -38,7 +38,7 @@
   position: absolute;
   font-family: "Anton";
   letter-spacing: 20px;
-  top: 20%;
+  top: 19%;
   font-size: 140px;
   margin-left: 15px;
 }

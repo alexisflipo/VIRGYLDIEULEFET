@@ -1,6 +1,9 @@
 class ContactMailer < ApplicationMailer
-    def admin_email
-        mail(to: ENV['ADMIN_EMAIL'], subject: "Tu as un nouveau contact")
+    
+    def admin_email(contact)
+        @contact = contact
+        mail to:"dividproduction@gmail.com"
+        mail from: @contact.email, subject: "#{@contact.email} t'a contacté"
     end
     def contact_email(contact)
         @greeting = "Bonjour"

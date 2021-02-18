@@ -29,6 +29,7 @@ import { initUpdateNavbarOnScroll } from "../components/navbar";
 import { displayCarousel } from "../components/carousel";
 import { zoom } from "../components/zoom";
 import { galery } from "../components/lightbox";
+import { smoothScroll } from "../components/smoothScroll";
 
 document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
@@ -37,6 +38,7 @@ document.addEventListener("turbolinks:load", () => {
   AOS.init();
   zoom();
   galery();
+  smoothScroll();
 });
 
 // document.addEventListener("DOMContentLoaded", function () {
