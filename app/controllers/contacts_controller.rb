@@ -8,9 +8,9 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     if @contact.save!
       ContactMailer.with(contact: @contact).contact_email(@contact).deliver_later
-      # ContactMailer.with(contact: @contact).admin_email(@contact).deliver_later
-      # redirect_to root_path, notice: "Message envoyé avec succès." + " " +
-      # "Merci, je vous réponds dans les plus brefs délais."
+      ContactMailer.with(contact: @contact).admin_email(@contact).deliver_later
+      redirect_to root_path, notice: "Message envoyé avec succès." + " " +
+      "Merci, je vous réponds dans les plus brefs délais."
     else 
       flash[:alert] = "Un problème est survenu, veuillez réessayer ultérieurement"
       render :new
