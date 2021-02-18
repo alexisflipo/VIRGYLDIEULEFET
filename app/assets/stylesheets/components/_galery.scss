@@ -3,7 +3,9 @@
   margin-top: 100px;
   margin-bottom: 50px;
 }
+
 .photo-galery {
+  position: relative;
   width: auto;
   height: auto;
   padding: 0px;
@@ -13,6 +15,7 @@
     opacity: 0.5;
   }
 }
+
 .section-icon {
   color: rgb(170, 170, 170);
   font-size: 40px;
