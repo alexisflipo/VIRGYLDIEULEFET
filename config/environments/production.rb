@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: "contact@dividproduction.com" }
+  config.action_mailer.default_url_options = { host: "https://www.dividproduction.com" }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -113,11 +113,11 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-  :address              => 'mail.privateemail.com',
-  :port                 => 26,
-  :user_name            => 'contact@dividproduction.com',
-  :password             => 'Chattam17590*',
-  :authentication       => :plain,
-  :enable_starttls_auto => true
+    :user_name => ENV['ADMIN_EMAIL'],
+    :password => ENV['ADMIN_PASSWORD'],
+    :address => 'smtp.gmail.com',
+    :port => 587,
+    :authentication => :plain,
+    :enable_starttls_auto => true
   }
 end
