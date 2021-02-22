@@ -39,6 +39,12 @@ document.addEventListener("turbolinks:load", () => {
   zoom();
   galery();
   smoothScroll();
+  function showContent() {
+    document.querySelector(".loader-container").classList.add("hidden");
+  }
+  if (document.querySelector(".loader-container")) {
+    window.addEventListener("load", showContent);
+  }
 });
 
 // document.addEventListener("DOMContentLoaded", function () {

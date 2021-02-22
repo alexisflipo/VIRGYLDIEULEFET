@@ -26,7 +26,9 @@
   max-width: 100%;
   color: white !important;
 }
-
+.form textarea {
+  color: white !important;
+}
 .form textarea {
   max-width: 100%;
 }
@@ -34,17 +36,17 @@
   color: #b3976c;
 }
 .bg-contact input {
-  background-color: transparent;
+  background-color: transparent !important;
   margin-bottom: 10px;
   border: 1px solid white;
 }
 
 .bg-contact ::placeholder {
-  color: white;
+  color: transparent;
 }
 
 .bg-contact textarea {
-  background-color: transparent;
+  background-color: transparent !important;
   border: 1px solid white;
 }
 
@@ -52,7 +54,7 @@
   color: white;
   height: 40px;
   &:hover {
-    background-color: white;
+    background-color: black !important;
     color: black;
   }
 }

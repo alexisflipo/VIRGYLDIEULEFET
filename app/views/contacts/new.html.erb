@@ -14,16 +14,17 @@
     </div>
 <div class="form col-sm-12 col-md-6 col-lg-6 col-xl-6">
     <p class="surf-chat">Vous pouvez laisser un message ici pour toute demande !</p>
-   <%= form_with model: @contact do |contact| %>
+   <%= simple_form_for @contact do |contact| %>
     <div>
-    <%= contact.text_field :name, size: "50", required: true, placeholder:"Nom", class:"name" %>
+    <%= contact.input :name, label: 'Nom', size: "50", required: true, placeholder:"Nom", class:"name", error:"Le nom doit contenir au moins 3 lettres" %>
+
     </div>
     
     <div>
-        <%= contact.email_field :email, size: "50", required: true, placeholder:"Email", class:"email" %>
+        <%= contact.input :email, size: "50", required: true, placeholder:"Email", class:"email", error:"L'email doit être valide" %>
     </div>
     <div>
-        <%= contact.text_area :message, size: "50x5", required: false, placeholder:"Message", class:"message" %>
+        <%= contact.input :message, as: :text, size: "50x5", required: true, placeholder:"Message", class:"message", error:"Le champs doit contenir au moins 10 caractères" %>
     </div>
     
         <%#= f.label :nickname %> <br>
@@ -33,7 +34,7 @@
     <div>
         <%= contact.submit 'Envoyer', class: "submit-btn" %>
     </div>
-    <%= link_to "Accueil", root_path, class:"btn btn-light my-3" %>
+    <%= link_to "Accueil", root_path, class:"btn btn-secondary my-3" %>
     </div>
     <% end %>
     </div>

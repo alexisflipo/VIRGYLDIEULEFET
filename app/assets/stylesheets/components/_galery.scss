@@ -109,6 +109,10 @@
     margin: 0px 10px;
     width: auto;
   }
+  .lightbox__close {
+    top: 2%;
+    right: 10%;
+  }
 }
 @media (max-width: 1366px) {
   .lightbox__container {

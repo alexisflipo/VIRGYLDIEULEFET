@@ -23,7 +23,7 @@
   height: 100%;
 }
 
-.banner h1 {
+.banner h3 {
   color: #c29f6d !important;
   font-weight: bold;
   font-size: 35px;
@@ -33,7 +33,7 @@
   letter-spacing: 10px;
 }
 
-.banner h3 {
+.banner h1 {
   color: #f9f6e8;
   position: absolute;
   font-family: "Anton";
@@ -51,7 +51,7 @@
 }
 
 @media (max-width: 570px) {
-  .banner h3 {
+  .banner h1 {
     font-size: 90px;
   }
   .banner h5 {
@@ -59,7 +59,7 @@
   }
 }
 @media (max-width: 1300px) {
-  .banner h3 {
+  .banner h1 {
     font-size: 90px;
   }
 }

@@ -6,7 +6,8 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-    if @contact.save!
+    if @contact.valid?
+      @contact.save
       ContactMailer.with(contact: @contact).contact_email(@contact).deliver_later
       ContactMailer.with(contact: @contact).admin_email(@contact).deliver_later
       redirect_to root_path, notice: "Message envoyé avec succès." + " " +
