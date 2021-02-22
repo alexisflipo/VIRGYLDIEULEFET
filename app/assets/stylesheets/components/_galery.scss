@@ -6,8 +6,6 @@
 
 .photo-galery {
   position: relative;
-  width: auto;
-  height: auto;
   padding: 0px;
   cursor: pointer;
 
@@ -107,6 +105,7 @@
 @media (max-width: 568px) {
   .photo-galery {
     max-width: 100%;
+    height: auto;
     margin: 0px 10px;
   }
 }

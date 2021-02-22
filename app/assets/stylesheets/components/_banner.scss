@@ -50,10 +50,16 @@
   font-family: "Roboto";
 }
 
-@media (max-width: 568px) {
+@media (max-width: 570px) {
   .banner h3 {
     font-size: 90px;
   }
+  .banner h5 {
+    top: 40%;
+  }
 }
-@media (min-width: 1200px) {
+@media (max-width: 1300px) {
+  .banner h3 {
+    font-size: 90px;
+  }
 }
