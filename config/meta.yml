@@ -1,4 +1,4 @@
 meta_product_name: "Dividproduction"
 meta_title: "Vidéaste - Photographe"
 meta_description: "Videaste et photographe dans le secteur Rochelais. Venez découvrir mes réalisations et faites appel à mes services."
-meta_image: "cover.png" # should exist in `app/assets/images/`
+meta_image: "cover.webp" # should exist in `app/assets/images/`
