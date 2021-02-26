@@ -37,6 +37,7 @@ gem 'simple_form'
 gem 'cloudinary'
 gem 'active_storage_validations'
 gem 'materialize-sass'
+gem "actionpack-page_caching"
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'

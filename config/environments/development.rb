@@ -24,7 +24,7 @@ Rails.application.configure do
       'Cache-Control' => "public, max-age=#{2.days.to_i}"
     }
   else
-    config.action_controller.perform_caching = false
+    config.action_controller.page_cache_directory = "#{Rails.root}/public/cached_pages"
 
     config.cache_store = :null_store
   end
