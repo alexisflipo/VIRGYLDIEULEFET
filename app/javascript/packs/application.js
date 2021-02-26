@@ -22,6 +22,7 @@ require("channels");
 
 // External imports
 import "bootstrap";
+import Bowser from "bowser";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -30,7 +31,7 @@ import { displayCarousel } from "../components/carousel";
 import { zoom } from "../components/zoom";
 import { galery } from "../components/lightbox";
 import { smoothScroll } from "../components/smoothScroll";
-
+import { browserDetector } from "../components/browserDetector";
 document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
   // initSelect2();
@@ -39,13 +40,14 @@ document.addEventListener("turbolinks:load", () => {
   zoom();
   galery();
   smoothScroll();
-  // function showContent() {
-  //   document.querySelector(".loader-container").classList.add("hidden");
-  // }
-  // if (document.querySelector(".loader-container")) {
-  //   window.addEventListener("load", showContent);
-  // }
+  browserDetector();
 });
+// function showContent() {
+//   document.querySelector(".loader-container").classList.add("hidden");
+// }
+// if (document.querySelector(".loader-container")) {
+//   window.addEventListener("load", showContent);
+// }
 
 // document.addEventListener("DOMContentLoaded", function () {
 //   var elems = document.querySelectorAll(".materialboxed");
