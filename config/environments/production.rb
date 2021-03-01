@@ -16,6 +16,10 @@ Rails.application.configure do
   config.action_controller.perform_caching = true
   config.require_master_key = true
   config.static_cache_control = "public, max-age=#{1.year.to_i}"
+  config.public_file_server.headers = {
+  'Cache-Control' => 'public, max-age=31536000',
+  'Expires' => 1.year.from_now.to_formatted_s(:rfc822)
+}
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
   # config.require_master_key = true
