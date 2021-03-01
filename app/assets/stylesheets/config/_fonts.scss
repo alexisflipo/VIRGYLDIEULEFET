@@ -1,6 +1,4 @@
 // Import Google fonts
-@import url("https://fonts.googleapis.com/css?family=Inconsolata|Merriweather");
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,200,300,800");
 @import url("https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
 // Define fonts for body and headers
 $body-font: "Work Sans", "Helvetica", "sans-serif";
@@ -15,3 +13,30 @@ $headers-font: "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+/* merriweather-regular - latin */
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/merriweather-v22-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/merriweather-v22-latin-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */
+      url("../fonts/merriweather-v22-latin-regular.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/merriweather-v22-latin-regular.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+}
+/* raleway-regular - latin */
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/raleway-v19-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/raleway-v19-latin-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/raleway-v19-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/raleway-v19-latin-regular.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+}
