@@ -24,7 +24,7 @@
     <% if @thumbnail_imgs.present? %>
       <% @thumbnail_imgs.each do |img| %>
         <% if img.photo.attached?%>
-       <%= image_tag img.photo, alt:"#{img.photo.attachment.filename.to_s}", class:"photo-galery col-sm-12 col-md-3 col-lg-3 col-xl-4" %>
+       <%= image_tag img.photo.variant(resize_to_fit: [1280, 720]), alt:"#{img.photo.attachment.filename.to_s}", class:"photo-galery col-sm-12 col-md-3 col-lg-3 col-xl-4" %>
         <% end %>
       <% end %>
     <% end %>

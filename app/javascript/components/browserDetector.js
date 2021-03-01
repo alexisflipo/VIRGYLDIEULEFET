@@ -1,3 +1,4 @@
+import Bowser from "bowser";
 const browserDetector = () => {
   const browser = Bowser.getParser(window.navigator.userAgent);
   if (

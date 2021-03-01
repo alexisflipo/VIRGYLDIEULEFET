@@ -29,7 +29,6 @@ gem 'redis', '~> 4.0'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise'
-gem 'rails_admin', '~> 2.0'
 gem 'activeadmin'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
@@ -38,6 +37,8 @@ gem 'cloudinary'
 gem 'active_storage_validations'
 gem 'materialize-sass'
 gem "actionpack-page_caching"
+gem 'mini_magick'
+gem 'image_processing', '~> 1.2'
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'

@@ -22,12 +22,10 @@ require("channels");
 
 // External imports
 import "bootstrap";
-import Bowser from "bowser";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { initUpdateNavbarOnScroll } from "../components/navbar";
-import { displayCarousel } from "../components/carousel";
 import { zoom } from "../components/zoom";
 import { galery } from "../components/lightbox";
 import { smoothScroll } from "../components/smoothScroll";

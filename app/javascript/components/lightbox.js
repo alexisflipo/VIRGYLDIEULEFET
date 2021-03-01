@@ -10,7 +10,7 @@ const galery = () => {
       dom.classList.add("lightbox");
       dom.innerHTML = `<button id="child" class="lightbox__close"></button>
         <div class="lightbox__container">
-          <img src="${img.src}" alt="">
+          <img src="${img.src}"  alt="">
         </div>`;
 
       document.body.appendChild(dom);

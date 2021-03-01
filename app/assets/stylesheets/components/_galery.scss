@@ -8,7 +8,7 @@
   position: relative;
   padding: 0px;
   cursor: pointer;
-  max-height: 200px;
+  max-height: 250px;
 
   &:hover {
     opacity: 0.5;
@@ -80,7 +80,7 @@
 }
 .lightbox__container img {
   width: auto;
-  max-height: 100vh;
+  max-height: 720px;
   animation: lightboxIn 0.5s;
 }
 .lightbox__container {
