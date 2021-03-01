@@ -19,24 +19,11 @@ $headers-font: "Helvetica", "sans-serif";
   font-family: "Merriweather";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/merriweather-v22-latin-regular.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/merriweather-v22-latin-regular.woff2") format("woff2"),
-    /* Super Modern Browsers */
-      url("../fonts/merriweather-v22-latin-regular.woff") format("woff"),
-    /* Modern Browsers */ url("../fonts/merriweather-v22-latin-regular.ttf")
+  src: url("merriweather-v22-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""), url("merriweather-v22-latin-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("merriweather-v22-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("merriweather-v22-latin-regular.ttf")
       format("truetype"); /* Safari, Android, iOS */
 }
 /* raleway-regular - latin */
-@font-face {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/raleway-v19-latin-regular.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/raleway-v19-latin-regular.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("../fonts/raleway-v19-latin-regular.woff")
-      format("woff"),
-    /* Modern Browsers */ url("../fonts/raleway-v19-latin-regular.ttf")
-      format("truetype"); /* Safari, Android, iOS */
-}
