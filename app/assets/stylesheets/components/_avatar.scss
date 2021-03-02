@@ -131,8 +131,22 @@ figure.snip0057.hover:before {
   figure .red {
     max-width: 100% !important;
   }
+  figure.snip0057 figcaption h2,
+  h5 {
+    font-size: 1em;
+  }
+  figure.snip0057 figcaption h2 span {
+    font-weight: 600px;
+  }
 
   figure.snip0057 .image img {
-    right: 70%;
+    right: 45%;
+    height: 300px;
+  }
+}
+@media (max-width: 570px) {
+  figure.snip0057 .image img {
+    height: 350px;
+    right: 30%;
   }
 }
