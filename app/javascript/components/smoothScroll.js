@@ -1,7 +1,7 @@
 const smoothScroll = () => {
   jQuery(($) => {
     // The speed of the scroll in milliseconds
-    const speed = 1000;
+    const speed = 500;
 
     $('a[href*="#"]')
       .filter(
