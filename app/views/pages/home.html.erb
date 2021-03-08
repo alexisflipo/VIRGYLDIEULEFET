@@ -6,32 +6,31 @@
 </div>
 <h1 class="section-icon text-center" data-aos="fade-up" data-aos-duration="1000"><i class="fas fa-video my-5"></i></h1>
 <section id="videos">
-  <div class="container d-flex flex-column align-items-center" data-aos="fade-up" data-aos-duration="1000">
-  <% if @thumbnail_videos.present? %>
-    <% @thumbnail_videos.each do |vid| %> 
-      <% if vid.video.attached?%>
-          <video controls volumeslider disablePictureInPicture controlsList="nodownload" src="<%=url_for(vid.video)%>" data-aos="fade-<%= vid.direction %>" data-aos-duration="1000" data-aos-delay="500" class="my-5"></video>
+ <div class="container">
+    <div class="row d-flex justify-content-center">
+    <% if @video_categories.present?%>
+      <% @video_categories.each do |video|  %>
+        <div class="card-category col-sm-12 col-md-5 col-lg-5 col-xl-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+          <%= link_to video.name, videos_category_path(video.id), class:"category-link"  %>
+        </div>
       <% end %>
-    <% end %>
-    <% end %>
+    <% end%>
+    </div>
   </div>
 </section>
 	
 <h1 class="section-icon text-center" data-aos="fade-up" data-aos-duration="1000"><i class="fas fa-camera"></i></h1>
-<section id="galery">
-  <div class="container mb-5" data-aos="fade-up" data-aos-duration="1000">
-    <div class="row mx-1 d-flex justify-content-center">
-    <% if @thumbnail_imgs.present? %>
-      <% @thumbnail_imgs.each do |img| %>
-        <% if img.photo.attached?%>
-       <%= image_tag img.photo.variant(resize_to_fit: [1280, 720]), alt:"#{img.photo.attachment.filename.to_s}", class:"photo-galery col-sm-12 col-md-4 col-lg-3 col-xl-3 mr-2 mb-2" %>
-        <% end %>
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+    <% if @photo_categories.present?%>
+      <% @photo_categories.each do |photo|  %>
+        <div class="card-category col-sm-12 col-md-5 col-lg-5 col-xl-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+          <%= link_to photo.name, photos_category_path(photo.id), class:"category-link"  %>
+        </div>
       <% end %>
     <% end %>
     </div>
-   </div>
-   
-</section>
+  </div>
 <section id="a-propos" >
 	<h1 class="section-icon text-center"><i class="fas fa-user"></i></h1>
 	<div class="container d-flex flex-column align-items-center">

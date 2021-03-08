@@ -11,7 +11,9 @@ ActiveAdmin.register ThumbnailImg do
     column :name do |img|
       img.photo.attachment.filename.to_s
     end
-    column :id
+    column :category do |img|
+      img.photo_category.name
+    end
     column :created_at
     column :updated_at
   end

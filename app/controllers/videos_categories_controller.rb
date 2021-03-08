@@ -4,7 +4,7 @@ class VideosCategoriesController < ApplicationController
     end
 
     def show
-        @video_category = VideoCategory.find[params[:id]]
+        @video_category = VideoCategory.find(params[:id])
     end
 
     def create

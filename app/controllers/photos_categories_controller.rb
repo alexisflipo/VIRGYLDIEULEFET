@@ -4,7 +4,7 @@ class PhotosCategoriesController < ApplicationController
     end
 
     def show
-        @photo_category = PhotoCategory.find[params[:id]]
+        @photo_category = PhotoCategory.find(params[:id])
     end
 
     def create
