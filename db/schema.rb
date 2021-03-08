@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_03_062101) do
+ActiveRecord::Schema.define(version: 2021_03_08_103414) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,10 +76,18 @@ ActiveRecord::Schema.define(version: 2021_02_03_062101) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "photo_categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "thumbnail_imgs", force: :cascade do |t|
     t.string "photo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "photo_category_id", null: false
+    t.index ["photo_category_id"], name: "index_thumbnail_imgs_on_photo_category_id"
   end
 
   create_table "thumbnail_videos", force: :cascade do |t|
@@ -87,6 +95,8 @@ ActiveRecord::Schema.define(version: 2021_02_03_062101) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "direction"
+    t.bigint "video_category_id", null: false
+    t.index ["video_category_id"], name: "index_thumbnail_videos_on_video_category_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -102,5 +112,13 @@ ActiveRecord::Schema.define(version: 2021_02_03_062101) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "video_categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "thumbnail_imgs", "photo_categories"
+  add_foreign_key "thumbnail_videos", "video_categories"
 end

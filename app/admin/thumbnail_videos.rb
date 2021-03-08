@@ -1,5 +1,5 @@
 ActiveAdmin.register ThumbnailVideo do
-  permit_params :video, :direction
+  permit_params :video, :direction, :video_category_id
   config.filters = false
 
   index do
@@ -21,12 +21,16 @@ ActiveAdmin.register ThumbnailVideo do
       vid.video.filename.to_s
       end
     end
+    row :category do |vid|
+      vid.video_category.name
+    end
   end
   end
   form do |f|
     f.inputs "Uploads" do
       f.input :video, as: :file, direct_upload: true
       f.input :direction
+      f.input :video_category_id, include_blank: false, :as => :select, :collection => VideoCategory.all
     end
     f.actions
   end

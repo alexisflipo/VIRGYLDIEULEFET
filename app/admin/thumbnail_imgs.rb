@@ -1,5 +1,5 @@
 ActiveAdmin.register ThumbnailImg do
-  permit_params :photo
+  permit_params :photo, :photo_category_id
 
   config.filters = false
 
@@ -24,11 +24,15 @@ ActiveAdmin.register ThumbnailImg do
     row :name do |img|
       img.photo.attachment.filename.to_s
     end
+    row :category do |img|
+      img.photo_category.name
+    end
   end
   end
   form do |f|
     f.inputs "Uploads" do
       f.input :photo, as: :file, direct_upload: true
+      f.input :photo_category_id, include_blank: false,  :as => :select, :collection => PhotoCategory.all
     end
     f.actions
   end
