@@ -13,11 +13,6 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-.logo-production {
-  width: 250px;
-  height: 150px;
-}
-
 .banner h1 {
   color: #c29f6d !important;
   font-weight: bold;
@@ -45,7 +40,13 @@
 .divid-banner {
   height: 150px;
   background-color: rgba(255, 255, 255, 0.945);
-  margin-bottom: 30px;
+}
+.divid-banner a:hover {
+  opacity: 0.7;
+}
+.logo-production {
+  height: 125px;
+  width: 200px;
 }
 @media (max-width: 570px) {
   .banner h3 {

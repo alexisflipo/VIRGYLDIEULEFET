@@ -4,18 +4,20 @@
     <h5 class= "text-center"> VIDÉOS & PHOTOGRAPHIES </h5>
   <a class='icon-scroll' href="#videos"></a>
 </div>
-<h1 class="section-icon text-center" data-aos="fade-up" data-aos-duration="1000"><i class="fas fa-handshake my-5"></i></h1>
 <section id="partners">
-  <div class="container">
+  <h1 class="section-icon text-center" data-aos="fade-up" data-aos-duration="1000"><i class="fas fa-handshake my-5" ></i></h1>
+  <div class="container" data-aos="fade-up" data-aos-duration="1000">
+    <h5 class="text-center">Ils peuvent en témoigner</h5>
     <div class="row d-flex justify-content-center">
-    <h4 class="text-center">Ils peuvent en parler</h4>
-
+      <% @partners.each do |partner|%>
+          <%= cl_image_tag partner.photo.key, class:"col-sm-6 col-md-4 col-lg-3 col-xl-3"  %>
+      <% end %>
     </div>
   </div>
 </section>
-<h1 class="section-icon text-center" data-aos="fade-up" data-aos-duration="1000"><i class="fas fa-video my-5"></i></h1>
-<section id="videos">
-  <div class="container">
+<section id="videos" data-aos="fade-up">
+  <h1 class="section-icon text-center" data-aos="fade-up" data-aos-duration="1000"><i class="fas fa-video my-5"></i></h1>
+  <div class="container" data-aos="fade-up" data-aos-duration="1000">
     <div class="row d-flex justify-content-center">
     <% if @video_categories.present?%>
       <% @video_categories.each do |video|  %>
@@ -33,9 +35,9 @@
   </div>
 </section>
 	
-<h1 class="section-icon text-center" data-aos="fade-up" data-aos-duration="1000"><i class="fas fa-camera"></i></h1>
-<section id="galery">
-  <div class="container">
+<section id="photos">
+  <h1 class="section-icon text-center" data-aos="fade-up" data-aos-duration="1000"><i class="fas fa-camera"></i></h1>
+  <div class="container" data-aos="fade-up" data-aos-duration="1000">
     <div class="row d-flex justify-content-center">
     <% if @photo_categories.present?%>
       <% @photo_categories.each do |photo|  %>
@@ -52,10 +54,10 @@
     </div>
   </div>
 </section>
-<section id="a-propos" >
-	<h1 class="section-icon text-center"><i class="fas fa-user"></i></h1>
-	<div class="container d-flex flex-column align-items-center">
-		<figure class="snip0057 red hover mt-5">
+<section id="a-propos">
+	<h1 class="section-icon text-center" data-aos="fade-up" data-aos-duration="1000"><i class="fas fa-user"></i></h1>
+	<div class="container d-flex flex-column align-items-center" data-aos="fade-up" data-aos-duration="1000">
+		<figure class="snip0057 red hover">
 			<figcaption>
 				<h2>Virgyl <span>Dieulefet</span></h2>
 				<h5 class="mt-1 text-center"><i class="fas fa-map-marker-alt">  </i> La Rochelle </h5>
@@ -68,7 +70,6 @@
     Pour toute demande de devis personnalisé, veuillez me contacter via l'onglet "Contact", je me ferai un réel plaisir de vous répondre dans les plus brefs délais.</p>
     <p class="text-center mt-2 mb-3">DIVID PRODUCTION</p>
 	</div>
-  
 </section>
 <div class="footer">
     <%= image_tag 'logo.webp', class: "logo-footer text-center"  %>

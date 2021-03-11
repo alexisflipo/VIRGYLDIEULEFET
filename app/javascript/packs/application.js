@@ -39,6 +39,9 @@ document.addEventListener("turbolinks:load", () => {
   galery();
   smoothScroll();
   browserDetector();
+  $(window).on("load", function () {
+    AOS.refresh();
+  });
 });
 // function showContent() {
 //   document.querySelector(".loader-container").classList.add("hidden");

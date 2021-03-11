@@ -1,11 +1,12 @@
 <%= render 'shared/banner' %>
-<div class="container mb-5" data-aos="fade-up" data-aos-duration="1000">
-  <div class="row mx-1 d-flex justify-content-center">
-    <% if @photo_category.thumbnail_imgs.present? %>
-      <% @photo_category.thumbnail_imgs.each do |img| %>
-        <%= cl_image_tag img.photo.key, alt:"#{img.photo.attachment.filename.to_s}", class:"photo-galery col-sm-12 col-md-4 col-lg-3 col-xl-3 mr-2 mb-2" %>
+<section id="galery">
+  <div class="container mb-5" data-aos="fade-up" data-aos-duration="1000">
+    <div class="row mx-1 d-flex justify-content-center">
+      <% if @photo_category.thumbnail_imgs.present? %>
+        <% @photo_category.thumbnail_imgs.each do |img| %>
+          <%= cl_image_tag img.photo.key, alt:"#{img.photo.attachment.filename.to_s}", class:"photo-galery col-sm-12 col-md-4 col-lg-3 col-xl-3 mr-2 mb-2" %>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
-</div>
-  
+</section> 
