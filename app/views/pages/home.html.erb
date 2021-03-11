@@ -4,38 +4,60 @@
     <h5 class= "text-center"> VIDÉOS & PHOTOGRAPHIES </h5>
   <a class='icon-scroll' href="#videos"></a>
 </div>
-<h1 class="section-icon text-center" data-aos="fade-up" data-aos-duration="1000"><i class="fas fa-video my-5"></i></h1>
-<section id="videos">
-  <div class="container d-flex flex-column align-items-center" data-aos="fade-up" data-aos-duration="1000">
-  <% if @thumbnail_videos.present? %>
-    <% @thumbnail_videos.each do |vid| %> 
-      <% if vid.video.attached?%>
-          <video controls volumeslider disablePictureInPicture controlsList="nodownload" src="<%=url_for(vid.video)%>" data-aos="fade-<%= vid.direction %>" data-aos-duration="1000" data-aos-delay="500" class="my-5"></video>
+<section id="partners">
+  <h1 class="section-icon text-center" data-aos="fade-up" data-aos-duration="1000"><i class="fas fa-handshake my-5" ></i></h1>
+  <div class="container" data-aos="fade-up" data-aos-duration="1000">
+    <h5 class="text-center">Ils peuvent en témoigner</h5>
+    <div class="row d-flex justify-content-center">
+      <% @partners.each do |partner|%>
+          <%= cl_image_tag partner.photo.key, class:"col-sm-6 col-md-4 col-lg-3 col-xl-3"  %>
       <% end %>
-    <% end %>
-    <% end %>
+    </div>
   </div>
 </section>
-	
-<h1 class="section-icon text-center" data-aos="fade-up" data-aos-duration="1000"><i class="fas fa-camera"></i></h1>
-<section id="galery">
-  <div class="container mb-5" data-aos="fade-up" data-aos-duration="1000">
-    <div class="row mx-1 d-flex justify-content-center">
-    <% if @thumbnail_imgs.present? %>
-      <% @thumbnail_imgs.each do |img| %>
-        <% if img.photo.attached?%>
-       <%= image_tag img.photo.variant(resize_to_fit: [1280, 720]), alt:"#{img.photo.attachment.filename.to_s}", class:"photo-galery col-sm-12 col-md-4 col-lg-3 col-xl-3 mr-2 mb-2" %>
-        <% end %>
+<section id="videos" data-aos="fade-up">
+  <h1 class="section-icon text-center" data-aos="fade-up" data-aos-duration="1000"><i class="fas fa-video my-5"></i></h1>
+  <div class="container" data-aos="fade-up" data-aos-duration="1000">
+    <div class="row d-flex justify-content-center">
+    <% if @video_categories.present?%>
+      <% @video_categories.each do |video|  %>
+        <div class="category col-sm-12 col-md-5 col-lg-5 col-xl-5" >
+          <%= link_to videos_category_path(video.id) do%>
+            <%= cl_image_tag video.photo.key, class:"card-category"%>
+            <div class="category-title d-flex justify-content-center align-items-center">
+              <h2><%= video.name %></h2>
+            </div>
+          <% end %>
+        </div>
       <% end %>
     <% end %>
     </div>
-   </div>
-   
+  </div>
 </section>
-<section id="a-propos" >
-	<h1 class="section-icon text-center"><i class="fas fa-user"></i></h1>
-	<div class="container d-flex flex-column align-items-center">
-		<figure class="snip0057 red hover mt-5">
+	
+<section id="photos">
+  <h1 class="section-icon text-center" data-aos="fade-up" data-aos-duration="1000"><i class="fas fa-camera"></i></h1>
+  <div class="container" data-aos="fade-up" data-aos-duration="1000">
+    <div class="row d-flex justify-content-center">
+    <% if @photo_categories.present?%>
+      <% @photo_categories.each do |photo|  %>
+        <div class="category col-sm-12 col-md-5 col-lg-5 col-xl-5" >
+          <%= link_to photos_category_path(photo.id) do%>
+            <%= cl_image_tag photo.photo.key, class:"card-category"%>
+            <div class="category-title d-flex justify-content-center align-items-center">
+            <h2><%= photo.name %></h2>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+    </div>
+  </div>
+</section>
+<section id="a-propos">
+	<h1 class="section-icon text-center" data-aos="fade-up" data-aos-duration="1000"><i class="fas fa-user"></i></h1>
+	<div class="container d-flex flex-column align-items-center" data-aos="fade-up" data-aos-duration="1000">
+		<figure class="snip0057 red hover">
 			<figcaption>
 				<h2>Virgyl <span>Dieulefet</span></h2>
 				<h5 class="mt-1 text-center"><i class="fas fa-map-marker-alt">  </i> La Rochelle </h5>
@@ -48,7 +70,6 @@
     Pour toute demande de devis personnalisé, veuillez me contacter via l'onglet "Contact", je me ferai un réel plaisir de vous répondre dans les plus brefs délais.</p>
     <p class="text-center mt-2 mb-3">DIVID PRODUCTION</p>
 	</div>
-  
 </section>
 <div class="footer">
     <%= image_tag 'logo.webp', class: "logo-footer text-center"  %>

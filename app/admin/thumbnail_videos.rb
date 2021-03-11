@@ -9,7 +9,9 @@ ActiveAdmin.register ThumbnailVideo do
         vid.video.attachment.filename.to_s
       end
     end
-    column :id
+    column :category do |vid|
+      vid.video_category.name
+    end
     column :created_at
     column :updated_at
   end

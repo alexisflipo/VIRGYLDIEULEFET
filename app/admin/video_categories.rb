@@ -1,5 +1,5 @@
 ActiveAdmin.register VideoCategory do
-  permit_params :name
+  permit_params :name, :photo
 
   config.filters = false
 
@@ -22,7 +22,6 @@ ActiveAdmin.register VideoCategory do
     column :name do |category|
       category.name
     end
-    column :id
     column :created_at
     column :updated_at
   end
@@ -37,6 +36,7 @@ ActiveAdmin.register VideoCategory do
   form do |f|
     f.inputs "Uploads" do
       f.input :name
+      f.input :photo, as: :file, direct_upload: true
     end
     f.actions
   end

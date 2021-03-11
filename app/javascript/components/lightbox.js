@@ -16,9 +16,7 @@ const galery = () => {
       document.body.appendChild(dom);
       document.addEventListener("click", (e) => {
         if (overlay) {
-          const navbar = document.querySelector("nav");
           const body = document.querySelector("body");
-          navbar.classList.add("disabled");
           body.classList.add("scroll-disable");
         }
         // else {
@@ -34,10 +32,8 @@ const galery = () => {
       if (close) {
         close.addEventListener("click", (e) => {
           const body = document.querySelector("body");
-          const navbar = document.querySelector("nav");
           overlay.classList.add("fadeOut");
           window.setTimeout(() => {
-            navbar.classList.remove("disabled");
             body.classList.remove("scroll-disable");
             close.parentNode.remove(overlay);
           }, 500);
@@ -45,11 +41,9 @@ const galery = () => {
         window.addEventListener("keydown", (e) => {
           const escape = e.key;
           const body = document.querySelector("body");
-          const navbar = document.querySelector("nav");
           if (escape === "Escape") {
             overlay.classList.add("fadeOut");
             window.setTimeout(() => {
-              navbar.classList.remove("disabled");
               body.classList.remove("scroll-disable");
               close.parentNode.remove(overlay);
             }, 500);
