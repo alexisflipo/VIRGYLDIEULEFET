@@ -4,33 +4,54 @@
     <h5 class= "text-center"> VIDÉOS & PHOTOGRAPHIES </h5>
   <a class='icon-scroll' href="#videos"></a>
 </div>
-<h1 class="section-icon text-center" data-aos="fade-up" data-aos-duration="1000"><i class="fas fa-video my-5"></i></h1>
-<section id="videos">
- <div class="container">
+<h1 class="section-icon text-center" data-aos="fade-up" data-aos-duration="1000"><i class="fas fa-handshake my-5"></i></h1>
+<section id="partners">
+  <div class="container">
     <div class="row d-flex justify-content-center">
-    <% if @video_categories.present?%>
-      <% @video_categories.each do |video|  %>
-        <div class="card-category col-sm-12 col-md-5 col-lg-5 col-xl-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-          <%= link_to video.name, videos_category_path(video.id), class:"category-link"  %>
-        </div>
-      <% end %>
-    <% end%>
+    <h4 class="text-center">Ils peuvent en parler</h4>
+
     </div>
   </div>
 </section>
-	
-<h1 class="section-icon text-center" data-aos="fade-up" data-aos-duration="1000"><i class="fas fa-camera"></i></h1>
+<h1 class="section-icon text-center" data-aos="fade-up" data-aos-duration="1000"><i class="fas fa-video my-5"></i></h1>
+<section id="videos">
   <div class="container">
     <div class="row d-flex justify-content-center">
-    <% if @photo_categories.present?%>
-      <% @photo_categories.each do |photo|  %>
-        <div class="card-category col-sm-12 col-md-5 col-lg-5 col-xl-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-          <%= link_to photo.name, photos_category_path(photo.id), class:"category-link"  %>
+    <% if @video_categories.present?%>
+      <% @video_categories.each do |video|  %>
+        <div class="category col-sm-12 col-md-5 col-lg-5 col-xl-5" >
+          <%= link_to videos_category_path(video.id) do%>
+            <%= cl_image_tag video.photo.key, class:"card-category"%>
+            <div class="category-title d-flex justify-content-center align-items-center">
+              <h2><%= video.name %></h2>
+            </div>
+          <% end %>
         </div>
       <% end %>
     <% end %>
     </div>
   </div>
+</section>
+	
+<h1 class="section-icon text-center" data-aos="fade-up" data-aos-duration="1000"><i class="fas fa-camera"></i></h1>
+<section id="galery">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+    <% if @photo_categories.present?%>
+      <% @photo_categories.each do |photo|  %>
+        <div class="category col-sm-12 col-md-5 col-lg-5 col-xl-5" >
+          <%= link_to photos_category_path(photo.id) do%>
+            <%= cl_image_tag photo.photo.key, class:"card-category"%>
+            <div class="category-title d-flex justify-content-center align-items-center">
+            <h2><%= photo.name %></h2>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+    </div>
+  </div>
+</section>
 <section id="a-propos" >
 	<h1 class="section-icon text-center"><i class="fas fa-user"></i></h1>
 	<div class="container d-flex flex-column align-items-center">

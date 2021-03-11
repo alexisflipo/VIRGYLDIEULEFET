@@ -26,6 +26,6 @@ class VideosCategoriesController < ApplicationController
     private
 
     def videos_category_params
-        params.require(:video_category).permit(:name)
+        params.require(:video_category).permit(:name, :photo)
     end
 end

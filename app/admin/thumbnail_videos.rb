@@ -10,7 +10,7 @@ ActiveAdmin.register ThumbnailVideo do
       end
     end
     column :category do |vid|
-      vid.photo_category.name
+      vid.video_category.name
     end
     column :created_at
     column :updated_at
