@@ -10,7 +10,7 @@
     <h5 class="text-center">Ils peuvent en témoigner</h5>
     <div class="row d-flex justify-content-center">
       <% @partners.each do |partner|%>
-          <%= cl_image_tag partner.photo.key, class:"col-sm-6 col-md-4 col-lg-3 col-xl-3"  %>
+          <%= cl_image_tag partner.photo.key, class:"partner col-sm-4 col-md-4 col-lg-3 col-xl-3 mx-1"  %>
       <% end %>
     </div>
   </div>

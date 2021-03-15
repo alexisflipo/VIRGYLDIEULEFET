@@ -160,6 +160,11 @@
   font-style: italic;
   color: #aaaaaa;
 }
+.partner {
+  width: 300px;
+  height: auto;
+  max-height: 250px;
+}
 @keyframes lightboxIn {
   from {
     opacity: 0;
@@ -172,7 +177,7 @@
 @media (max-width: 570px) {
   .photo-galery {
     max-width: 100%;
-    max-height: 300px;
+    max-height: 200px;
     height: auto;
     margin: 0px 10px;
     width: auto;
@@ -181,10 +186,20 @@
     top: 2%;
     right: 10%;
   }
+  .partner {
+    width: 120px;
+    height: auto;
+    max-height: 100px;
+  }
 }
+
 @media (max-width: 1366px) {
   .lightbox__container {
     margin-right: 10px !important;
     margin-left: 10px !important;
+  }
+  .partner {
+    height: auto;
+    max-height: 250px;
   }
 }

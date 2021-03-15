@@ -1,8 +1,10 @@
 <%= render 'shared/banner' %>
-<div class="container d-flex flex-column align-items-center" data-aos="fade-up" data-aos-duration="1000">
-  <% if @video_category.thumbnail_videos.present? %>
-    <% @video_categoru.thumbnail_videos.each do |vid| %> 
-      <video controls volumeslider disablePictureInPicture controlsList="nodownload" src="<%=url_for(vid.video)%>" data-aos="fade-<%= vid.direction %>" data-aos-duration="1000" data-aos-delay="500" class="my-5"></video>
+<section id="video-galery">
+  <div class="container d-flex flex-column align-items-center" data-aos="fade-up" data-aos-duration="1000">
+    <% if @video_category.thumbnail_videos.present? %>
+      <% @video_category.thumbnail_videos.each do |vid| %> 
+        <video controls volumeslider disablePictureInPicture controlsList="nodownload" src="https://res.cloudinary.com/virgyldieulefet/video/upload/<%= vid.video.key %>.mp4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500" class="video my-5"></video>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
+  </div>
+</section>
