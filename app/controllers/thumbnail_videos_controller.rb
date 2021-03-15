@@ -22,7 +22,7 @@ class ThumbnailVideosController < ApplicationController
     private
   
     def video_params
-      params.require(:thumbnail_video).permit(:video, :file, :direction)
+      params.require(:thumbnail_video).permit(:video, :file, :direction, :video_category_id)
       
     end
 end

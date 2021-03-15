@@ -2,18 +2,28 @@
   height: auto;
   max-width: 100%;
 }
-
-#videos video {
-  max-width: 100%;
+#video-galery .container {
+  overflow: hidden;
+  margin-top: 50px;
+}
+.video {
+  width: 720px;
   height: auto;
+  overflow: hidden;
 }
 #videos .container {
   overflow: hidden;
 }
 
-@media (max-width: 568px) {
-  #videos video {
-    max-width: 100%;
+@media (max-width: 600px) {
+  .video {
+    width: 480px;
+    height: auto;
+  }
+}
+@media (max-width: 500px) {
+  .video {
+    width: 300px;
     height: auto;
   }
 }
